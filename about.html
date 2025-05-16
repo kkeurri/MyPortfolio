@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  	<title>My Portfolio</title>
+  	<!--link rel="stylesheet" href="2.css"/-->
+
+<style>
+@font-face {
+    font-family: 'headerFont';
+    src: url('fonts/MillionDesign.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bodyFont';
+    src: url('fonts/CreatoDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'headerFont', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'headerFont', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+p {
+    font-family: 'bodyFont', sans-serif;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}
+
+.next-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #2449A4;
+    color: #F1ECE6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #122E66;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.container_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+    width: 1000px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.top {
+    background-color: #F1ECE6;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    	width: 900px;
+    	border-collapse: collapse;
+}
+
+th {
+	text-align: center;
+	letter-spacing: 1.5px;
+	font-family: 'bodyFont', sans-serif;
+	width: 150px;
+}
+
+td {
+	padding: 5px;
+}
+
+.subject {
+         display: block;
+         width: 100%;
+         background-color: #A0CAE0;
+         padding: 5px;
+         border-radius: 6px;
+         font-size: 14px;
+         box-sizing: border-box;
+	font-family: 'bodyFont', sans-serif;
+	letter-spacing: 1.5px;
+}
+
+.header {
+	background-color: #C2B3A1;
+	color: #F1ECE6;
+}
+</style>
+</head>
+<body>
+<div class="container_row">
+	<div class="row top" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+		<h1 style="color: #003366">Study Load</h1>
+		<div class="columns" style="justify-content: center; align-items: center;">
+
+			<table cellspacing="0" cellpadding="10">
+				
+  					<tr class= "header" style= "border-readius: 15px">
+    						<th ><b>Monday</b></th>
+    						<th><b>Tuesday</b></th>
+    						<th><b>Wednesday</b></th>
+    						<th><b>Thursday</b></th>
+    						<th><b>Friday</b></th>
+  					</tr>
+				<tr>
+					
+					<td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					
+					<td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					
+					<td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					
+<td rowspan="3" style= "vertical-align: top"><div class= "subject" style= "height: 150px; background-color: #A0CAE0; color: #003366">
+						CTBASNTL <br>Basic Networking<br>10:00 - 12:40<br>508MB </div
+					</td>
+<td rowspan="3"style= "vertical-align: top"><div class= "subject" style= "height: 150px; background-color: #E8AAD1; color: #003366">
+						CTWBDEVL <br>Web Systems & Technologies<br>10:00 - 12:40<br>510MB
+					</td>
+
+					<td></td><td></td><td></td>
+				</tr>
+				<tr>
+					
+					<td></td>
+					<td rowspan="4" style= "vertical-align: top"><div class= "subject" style= "height: 220px; background-color: #A0CAE0; color: #003366">
+						CTBASNTL <br>Basic Networking<br>11:00 - 3:00<br>513MB
+					</td>
+					<td rowspan="4" style= "vertical-align: top"><div class= "subject" style= "height: 220px; background-color: #E8AAD1; color: #003366"> 
+						CTWBDEVL <br>Web Systems & Technologies<br>11:00 - 3:00<br>411MB
+					</td>
+				</tr>
+				<tr>
+										<td></td>
+				</tr>
+				<tr>
+					
+					<td rowspan="3" style= "vertical-align: top"><div class= "subject" style= "height: 150px; background-color: #FFFFFF; color: #E853A1;">
+						CTFDMBSL <br>Database Systems<br>1:00 - 3:40<br>508MB
+					</td><td></td>
+					
+				</tr>
+				<tr>
+					
+					<td></td>
+				</tr>
+				<tr>
+					
+					<td rowspan="3" style= "vertical-align: top"><div class= "subject" style= "height: 150px; background-color: #5886BA; color: #F1ECE6;">
+						CCQUAMET <br>Quantitative Methods<br>3:40 - 5:40<br>508MB
+					</td>
+					<td></td>
+					<td rowspan="4" style= "vertical-align: top"><div class= "subject" style= "height: 220px; background-color: #FFFFFF; color: #E853A1;">
+						CTFDMBSL <br>Database Systems<br>3:00 - 7:00<br>508MB
+					</td>
+					<td rowspan="3" style= "vertical-align: bottom"><div class= "subject" style= "height: 150px; background-color: #5886BA; color: #F1ECE6;">
+						CCQUAMET <br>Quantitative Methods<br>3:40 - 5:40<br>508MB
+					</td>
+				</tr>
+				<tr>
+					
+					<td></td><td></td>
+				</tr>
+				<tr>
+					
+					<td></td><td></td>
+				</tr>
+				<tr>
+					
+					<td></td><td></td><td></td><td></td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

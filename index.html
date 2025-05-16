@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  	<title>My Portfolio</title>
+  	<!--link rel="stylesheet" href="2.css"/-->
+<head>
+<style>
+@font-face {
+        font-family: 'headerFont';
+        src: url('fonts/MillionDesign.ttf') format('truetype');             
+	font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+        font-family: 'bodyFont';
+        src: url('fonts/CreatoDisplay-Regular.otf') format('opentype');             
+	font-weight: normal;
+        font-style: normal;
+}
+
+body {
+	font-family: Arial, sans-serif;
+     	margin: 0;
+      	padding: 0;
+      	background-color: #f3f3f3;
+	align-items: center;
+}
+
+.container_row {
+	display: flex;
+	justify-content: space-between;
+      	padding: 40px;
+      	gap: 20px;
+	width:1000px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+
+.row {
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.row:hover {
+    	transform: scale(1.05);
+    	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    	cursor: pointer;
+}
+
+.top {
+	background-color: #F1ECE6;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.center1 {
+	background-color: #E853A1;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.center2 {
+	background-color: #003366;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.bottom {
+	background-color: #A0CAE0;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container_column {
+	display: flex;
+	justify-content: space-between;
+      	padding: 40px;
+      	gap: 20px;
+	flex-direction: column;
+}
+
+.columns {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	margin-top: 20px;
+ 	max-width: 800px; 
+}
+ 
+.column {
+	padding: 15px;
+}
+ 
+.left {
+	background-color: transparent;
+}
+ 
+.right {
+	background-color: transparent;
+}
+
+h1 {
+	font-family: 'headerFont', sans-serif;
+	letter-spacing: 2px;
+	text-align: center;
+	line-height: 1;
+	font-size: 40px;	
+}
+
+h2 {
+	font-family: 'headerFont', sans-serif;
+	letter-spacing: 2px;	
+	line-height: 1;
+}
+
+p {
+	font-family: 'bodyFont', sans-serif;
+	line-height: 20px;
+	letter-spacing: 1.5px;
+}
+
+.next-btn {
+    	align-self: flex-end; 
+    	margin-top: 10px;
+    	padding: 5px 10px;
+    	font-size: 15px;
+    	font-weight: bold;
+    	background-color: #2449A4; 
+    	color: #F1ECE6;     
+    	border: none;
+    	border-radius: 10px;     
+    	cursor: pointer;
+    	transition: 0.3s ease;
+}
+
+
+.next-btn:hover {
+    	background-color: #122E66; 
+}
+
+.table-container {
+  	border: 5px solid #E853A1; 
+  	border-radius: 15px;
+  	overflow: hidden; 
+  	display: inline-block; 
+}
+
+table {
+      	width: 100%;
+      	border-collapse: collapse; 
+      	border-spacing: 0;
+     	padding: 20px;
+}
+
+th {
+	background-color: #E853A1;
+	text-align: center;
+	padding: 20px; 
+	border: 5px solid #E853A1;
+	color: #F1ECE6;
+}
+
+th:hover {
+    	background-color: #CB2D80; 
+    	color: #E4DCD1; 
+}
+
+
+td {
+	background-color: #E8AAD1;
+      	text-align: center;
+	padding: 20px; 
+	border: 5px solid #E853A1;
+	color: #003366;
+}
+
+.hover-img {
+    	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-img:hover {
+    	transform: scale(1.05);
+    	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    	cursor: pointer;
+}
+
+.hover-text {
+        position: absolute;
+    	bottom: 10px; 
+    	left: 50%;
+    	transform: translateX(-50%);
+    	color: white;
+    	font-size: 12px;
+    	visibility: hidden;
+    	opacity: 0;
+    	transition: opacity 0.3s ease;
+    	background-color: rgba(0, 0, 0, 0.5);
+    	padding: 5px 5px;
+    	border-radius: 5px;
+	width: 60%;
+	text-align: center;
+}
+
+.hover-img:hover + .hover-text {
+    	visibility: visible;
+   	opacity: 1;
+}
+</style>
+
+<body>
+	<div class="container_row">
+	  	<div class="row top"  style=" display: flex; flex-direction: column; justify-content: center; align-items: center;">
+			<h1 style= "color: #003366">Welcome to <br> My Personal Webpage!</h1>
+      			<div class="columns" style="justify-content: center; align-items: center;">
+		
+        			<div class="column left">
+					<div style= "flex: 1; display: flex; justify-content: flex-end;">
+          				<img src="claire.png" 									style="width:200px; height:200px;" alt="Profile 						Picture"/>
+					</div>
+        			</div>
+        		<div class="column right">
+				<div style= "flex: 1; justify-content: flex-start;">
+          			<p style= "color: #E853A1; font-size: 25px ">
+            			<strong>Claire Marylouise F. Bonzon</strong></p>
+            			<p> <b> Bachelor of Science in Information Technology</b><br> Major in Multimedia Arts and Animation</p>
+				<p> <mark style= "background-color: #E853A1; color: #F1ECE6"> I like making art and exploring different styles. </mark></p>
+
+
+				<button class="next-btn" onclick="location.href='about.html'">About Me</button>
+				</div>
+			
+        		</div>
+      		</div>
+    	</div>
+
+		<div class="row center1">
+      			<h1 style= "color: #F1ECE6">Projects </h1>
+			<div class="columns">
+        			<div class="column left" style= "max-width: 700px">
+				
+					<h2 style= "color: #F1ECE6"> <strong> Artchive 						</strong> </h2>
+					<blockquote style= "text-align: justify; font-family: 'bodyFont', sans-serif; letter-spacing: 1.5px; color: #F1ECE6;"> ArtChive is a digital solution 						designed to help artists efficiently manage and 					organize their growing collections. By offering a 					user-friendly platform to document essential 						details, categorize works, and track productivity, 					it empowers artists, students, and educators to 					focus more on creativity and less on administrative 					tasks. Supporting Sustainable Development Goal 4, 					ArtChive promotes lifelong learning and artistic 					growth through better organization, accessibility, 					and peace of mind. </blockquote>
+					<p style= "color: #F1ECE6"> The goal of this project is to: <em> <strong> <q> Give 					artists the freedom to create without the fear of 					losing their work or progress. </q> </strong> </em> </p>
+				
+				</div>
+				<div class="column right" style= "max-width: 100px">
+					<div style="justify-content: flex-start; position: relative; display: inline-block;">
+<a href="artchive.apk" download>
+  <img src="artchive.png" style="width: 250px; height: 250px; border-radius: 30px; border: 8px solid #F1ECE6;" class="hover-img" alt="ArtChive">
+  <div class="hover-text">
+    Click to download the app!
+  </div>
+</a>
+</div>
+				</div>
+			</div>
+		</div>
+ 
+    		<div class="row center2">
+      			<h1 style= "color: #F1ECE6">Achievements</h1>
+			<ul style= "color: #F1ECE6; font-family: 'bodyFont', sans-serif; letter-spacing: 1.5px">
+        			<li> Graduated with High Honors </li>
+        			<li> Outstanding Performance in Arts </li>
+        			<li> Academic Excellence Awardee </li>
+       				<li> DOST Scholarship Passer </li>
+				<li> Metafocus 2022- Canvas Art Making Contest- 1st Place 				(National Level) </li>
+				<li> Division Festival of Talents- Pintahusay- 1st Place 				</li>
+				<li> Division School Press Conference- Editorial 					Cartooning- 2nd Place (Division Level) </li>
+				<li> DOST Scholarship Passer </li>
+     			 </ul>
+
+    		</div>
+ 
+    		<div class="row bottom">
+      			<h1 style= "color: #003366">Publications</h1>
+		<div class= "table-container">
+			<table style= "letter-spacing: 1.5px">
+			<tr>
+				<th style="font-family: 'bodyFont', sans-serif;">
+  <a href="WHAC'M.pdf" target="_blank" 
+     style="text-decoration: underlined; color: #F1ECE6;">
+     WHAC'M
+  </a>
+</th>
+				<th style= "text-align: justify; font-family: 'bodyFont', sans-serif;"> <a href="concrete.pdf" target="_blank" style="text-decoration: underlined; color: #F1ECE6;"> Introducing Self-healing Process for Enhancement of 					Plastic-incorporated Concrete Hollow Block Using Bacillus 				Subtilis As A Self-healing Agent </a></th>
+			</tr>
+			<tr>
+				<td style= "text-align: justify; font-family: 'bodyFont', sans-serif;"> WHAC'M addresses two 			environmental concerns: air and water pollution. With rising 				vehicle numbers contributing to increased emissions, and invasive 			water hyacinths causing waterway blockages, the researchers 				developed a filter for diesel vehicle emissions using activated 			carbon derived from water hyacinth. Characterization through FTIR 			and SEM confirmed the material's porous nature and comparability to 			commercial activated carbon. The filter effectively reduced 				emissions, proving to be a viable eco-friendly alternative. </td>
+				<td style= "text-align: justify; font-family: 'bodyFont', sans-serif;"> This study explores 			the use of PET plastic waste and encapsulated Bacillus subtilis to 			enhance the strength and sustainability of concrete hollow blocks 			(CHB). PET particles were processed from plastic bottles, while 			Bacillus subtilis was encapsulated in expanded clay with protective 			coatings. Six CHB samples were created and tested for compressive 			strength, density, and self-healing ability. Results showed that 			PET-incorporated CHBs with bacteria achieved comparable or improved 			performance, especially after 12 and 28 days. </td>
+			</tr>
+			</table>
+		</div>
+
+    		</div>
+ 
+  	</div>
+</body>
+</html> 
